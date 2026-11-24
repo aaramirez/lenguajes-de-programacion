@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lenguajes de programación</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Cómo se diseña y se define un lenguaje: sintaxis, alcance, cálculo lambda, semántica operacional y denotacional, sistemas de tipos con inferencia de Hindley-Milner, continuaciones, efectos, objetos y macros, construyendo con un intérprete un lenguaje pequeño propio, Ceiba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html">Lenguajes de <b>programación</b></a><span class="eyebrow">Curso visual e interactivo · Computación</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Computación</span>
+  <h1>Diseña tu propio lenguaje y entiende de paso todos los demás</h1>
+  <p class="lede">Cada lenguaje responde las mismas preguntas: qué significa un nombre, cuándo se evalúa una expresión, qué errores se detectan antes de ejecutar. Este curso las responde con precisión matemática y con código: capítulo a capítulo se diseña e implementa Ceiba, un lenguaje pequeño, con un intérprete que corre en la página. Al final Ceiba tiene funciones, tipos inferidos, continuaciones y módulos, y está listo para que Compiladores lo compile.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 14 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para estudiantes de computación y programadores que ya escriben código con soltura en algún lenguaje y conocen la recursión. Ayuda haber visto inducción (Matemáticas discretas) y gramáticas (Teoría de la computación). El panorama práctico de paradigmas y tipado está en Ingeniería de software; aquí se estudian con definiciones, reglas y demostraciones.</p>
+    <p><b>Cómo está hecho.</b> Un mismo lenguaje recorre el curso: Ceiba, que empieza como una calculadora y gana una pieza por capítulo (nombres, funciones, recursión, tipos, efectos, control, módulos). El programa de ejemplo es `primos.ceiba`, que filtra los números primos de una lista con funciones de orden superior, y se reescribe a medida que Ceiba crece. El intérprete está escrito en TypeScript y corre en la página: cada laboratorio deja editar el programa o la regla del lenguaje y mirar el árbol, el entorno o la derivación que resulta. Las demostraciones importantes (Church-Rosser, seguridad de tipos, la corrección del algoritmo W) se hacen completas.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> Qué es un lenguaje</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="un-lenguaje-es-un-acuerdo"><span class="n">01</span><b>Un lenguaje es un acuerdo: sintaxis, semántica y pragmática</b><p>Qué define a un lenguaje, por qué hay tantos y el plan para diseñar Ceiba desde cero.</p></div>
+    <div class="mod soon" data-id="sintaxis-concreta-y-abstracta"><span class="n">02</span><b>Sintaxis concreta y abstracta</b><p>Gramáticas en BNF, ambigüedad, precedencia y el árbol de sintaxis abstracta que usa todo el curso.</p></div>
+    <div class="mod soon" data-id="primer-interprete"><span class="n">03</span><b>El primer intérprete: evaluar por recursión estructural</b><p>Ceiba como calculadora: valores, un evaluador recursivo y la semántica de paso grande escrita como reglas.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Nombres, funciones y significado</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="ligaduras-y-alcance"><span class="n">04</span><b>Ligaduras, entornos y alcance</b><p>`let`, variables libres y ligadas, sustitución y entornos, y la diferencia entre alcance estático y dinámico.</p></div>
+    <div class="mod soon" data-id="funciones-y-clausuras"><span class="n">05</span><b>Funciones de primera clase y clausuras</b><p>Funciones como valores, clausuras que recuerdan su entorno, recursión y funciones de orden superior.</p></div>
+    <div class="mod soon" data-id="calculo-lambda"><span class="n">06</span><b>El cálculo lambda</b><p>Tres reglas que bastan para computar todo: reducción β, codificaciones de Church y el teorema de Church-Rosser.</p></div>
+    <div class="mod soon" data-id="semantica-formal"><span class="n">07</span><b>Semántica formal: operacional, denotacional y axiomática</b><p>Tres maneras de decir con precisión qué significa un programa, y cuándo conviene cada una.</p></div>
+    <div class="mod soon" data-id="evaluacion-estricta-y-perezosa"><span class="n">08</span><b>Estrategias de evaluación: estricta y perezosa</b><p>Paso por valor, por nombre y por necesidad, *thunks* y listas infinitas.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Tipos</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="sistemas-de-tipos"><span class="n">09</span><b>Sistemas de tipos: reglas y seguridad</b><p>Reglas de tipado, el cálculo lambda simplemente tipado y la demostración de que los programas bien tipados no se atascan.</p></div>
+    <div class="mod soon" data-id="polimorfismo-e-inferencia"><span class="n">10</span><b>Polimorfismo e inferencia de Hindley-Milner</b><p>Tipos genéricos sin anotaciones: unificación, el algoritmo W y el polimorfismo de `let`.</p></div>
+    <div class="mod soon" data-id="tipos-algebraicos-y-subtipos"><span class="n">11</span><b>Tipos algebraicos, coincidencia de patrones y subtipos</b><p>Productos, sumas, registros, exhaustividad de los patrones, subtipos y varianza.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Efectos, control y estructura</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="estado-y-efectos"><span class="n">12</span><b>Estado mutable y efectos</b><p>Referencias, el almacén en la semántica, el aliasing y los efectos algebraicos con sus manejadores.</p></div>
+    <div class="mod soon" data-id="continuaciones-y-concurrencia"><span class="n">13</span><b>Continuaciones, control y concurrencia en el lenguaje</b><p>El resto del cómputo como valor: CPS, `call/cc`, excepciones, generadores, `async` y procesos.</p></div>
+    <div class="mod soon" data-id="objetos-modulos-y-macros"><span class="n">14</span><b>Objetos, módulos y macros: Ceiba completo</b><p>Objetos como clausuras, despacho dinámico, módulos con tipos abstractos y macros higiénicas, y la especificación de Ceiba para Compiladores.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/lenguajes-de-programacion" target="_blank" rel="noopener">github.com/aaramirez/lenguajes-de-programacion</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
